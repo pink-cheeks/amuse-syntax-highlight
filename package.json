@@ -1,0 +1,25 @@
+{
+  "name": "amuse-syntax-highlight",
+  "displayName": "Amuse Syntax Highlight",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "amuse",
+      "aliases": ["Amuse", "amuse"],
+      "extensions": [".muse"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "amuse",
+      "scopeName": "source.muse",
+      "path": "./syntaxes/amuse.tmLanguage.json"
+    }]
+  }
+}

@@ -1,0 +1,328 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Amuse",
+	"patterns": [
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#symbols"
+		},
+		{
+			"include": "#breakline"
+		},
+		{
+			"include": "#markup"
+		},
+		{
+			"include": "#em_tag"
+		},
+		{
+			"include": "#strong_tag"
+		},
+		{
+			"include": "#code_tag"
+		},
+		{
+			"include": "#verbatim_tag"
+		},
+		{
+			"include": "#sub_tag"
+		},
+		{
+			"include": "#sup_tag"
+		},
+		{
+			"include": "#del_tag"
+		},
+		{
+			"include": "#sf_tag"
+		},
+		{
+			"include": "#sc_tag"
+		},
+		{
+			"include": "#center"
+		},
+		{
+			"include": "#right"
+		},
+		{
+			"include": "#example"
+		},
+		{
+			"include": "#verse"
+		},
+		{
+			"include": "#biblio"
+		},
+		{
+			"include": "#play"
+		},
+		{
+			"include": "#directives"
+		}
+	],
+	"repository": {
+		"comment": {
+			"name": "comment.amuse",
+			"begin": "^; .*",
+			"end": "$",
+			"patterns": [
+				{
+					"name": "constant.character.escape.amuse",
+					"match": "^; .*"
+				}
+			]
+		},
+		"symbols": {
+			"match": "\\*|=|[|]|{|}|(\\|)|(\\|\\+)|(\\+\\|)|^>",
+			"name": "keyword.operator.new.amuse"	
+		},
+		"breakline": {
+			"match": "<br>",
+			"name": "keyword.control.amuse"	
+		},
+		"center": {
+			"begin": "^<center>$",
+			"beginCaptures": {
+				"0": {
+					"name": "keyword.control.amuse"
+				}
+			},
+			"end": "^</center>$",
+			"endCaptures": {
+				"0": {
+					"name": "keyword.control.amuse"
+				}
+			},
+			"name": "string.unquoted.amuse"	
+		},
+		"right": {
+			"begin": "^<right>$",
+			"beginCaptures": {
+				"0": {
+					"name": "keyword.control.amuse"
+				}
+			},
+			"end": "^</right>$",
+			"endCaptures": {
+				"0": {
+					"name": "keyword.control.amuse"
+				}
+			},
+			"name": "string.unquoted.amuse"	
+		},
+		"example": {
+			"begin": "^(<example>|{{{)$",
+			"beginCaptures": {
+				"0": {
+					"name": "keyword.control.amuse"
+				}
+			},
+			"end": "^(</example>|}}})$",
+			"endCaptures": {
+				"0": {
+					"name": "keyword.control.amuse"
+				}
+			},
+			"name": "string.unquoted.amuse"	
+		},
+		"verse": {
+			"begin": "^(<verse>)$",
+			"beginCaptures": {
+				"0": {
+					"name": "keyword.control.amuse"
+				}
+			},
+			"end": "^(</verse>)$",
+			"endCaptures": {
+				"0": {
+					"name": "keyword.control.amuse"
+				}
+			},
+			"name": "string.unquoted.amuse"	
+		},
+		"biblio": {
+			"begin": "^(<biblio>)$",
+			"beginCaptures": {
+				"0": {
+					"name": "keyword.control.amuse"
+				}
+			},
+			"end": "^(</biblio>)$",
+			"endCaptures": {
+				"0": {
+					"name": "keyword.control.amuse"
+				}
+			},
+			"name": "string.unquoted.amuse"	
+		},
+		"play": {
+			"begin": "^(<play>)$",
+			"beginCaptures": {
+				"0": {
+					"name": "keyword.control.amuse"
+				}
+			},
+			"end": "^(</play>)$",
+			"endCaptures": {
+				"0": {
+					"name": "keyword.control.amuse"
+				}
+			},
+			"name": "string.unquoted.amuse"	
+		},
+		"directives": {
+			"begin": "^#(author |title |lang |LISTtitle |subtitle |SORTauthors |SORTtopics |date |notes |source |publisher |isbn |rights |seriesname |seriesnumber |hyphenation |slides |DELETED |cover |coverwidth |nocoverpage |notoc |nofinalpage |impressum |continuefootnotes |centerchapter |centersection |formats )",
+			"beginCaptures": {
+				"0": {
+					"name": "keyword.operator.new"
+				}
+			},
+			"end": "$",
+			"endCaptures": {
+				"0": {
+					"name": "keyword.operator.new"
+				}
+			},
+			"name": "variable.language"	
+		},
+		"em_tag": {
+			"begin": "<em>",
+			"beginCaptures": {
+				"0": {
+					"name": "constant.character.amuse"
+				}
+			},
+			"end": "</em>",
+			"endCaptures": {
+				"0": {
+					"name": "constant.character.amuse"
+				}
+			},
+			"name": "string.unquoted.amuse"	
+		},
+		"strong_tag": {
+			"begin": "<strong>",
+			"beginCaptures": {
+				"0": {
+					"name": "constant.character.amuse"
+				}
+			},
+			"end": "</strong>",
+			"endCaptures": {
+				"0": {
+					"name": "constant.character.amuse"
+				}
+			},
+			"name": "string.unquoted.amuse"	
+		},
+		"code_tag": {
+			"begin": "<code>",
+			"beginCaptures": {
+				"0": {
+					"name": "constant.character.amuse"
+				}
+			},
+			"end": "</code>",
+			"endCaptures": {
+				"0": {
+					"name": "constant.character.amuse"
+				}
+			},
+			"name": "constant.other.amuse"	
+		},
+		"verbatim_tag": {
+			"begin": "<verbatim>",
+			"beginCaptures": {
+				"0": {
+					"name": "constant.character.amuse"
+				}
+			},
+			"end": "</verbatim>",
+			"endCaptures": {
+				"0": {
+					"name": "constant.character.amuse"
+				}
+			},
+			"name": "constant.other.amuse"	
+		},
+		"sub_tag": {
+			"begin": "<sub>",
+			"beginCaptures": {
+				"0": {
+					"name": "constant.character.amuse"
+				}
+			},
+			"end": "</sub>",
+			"endCaptures": {
+				"0": {
+					"name": "constant.character.amuse"
+				}
+			},
+			"name": "constant.language.amuse"	
+		},
+		"sup_tag": {
+			"begin": "<sup>",
+			"beginCaptures": {
+				"0": {
+					"name": "constant.character.amuse"
+				}
+			},
+			"end": "</sup>",
+			"endCaptures": {
+				"0": {
+					"name": "constant.character.amuse"
+				}
+			},
+			"name": "constant.language.amuse"	
+		},
+		"del_tag": {
+			"begin": "<del>",
+			"beginCaptures": {
+				"0": {
+					"name": "constant.character.amuse"
+				}
+			},
+			"end": "</del>",
+			"endCaptures": {
+				"0": {
+					"name": "constant.character.amuse"
+				}
+			},
+			"name": "constant.language.amuse"	
+		},
+		"sf_tag": {
+			"begin": "<sf>",
+			"beginCaptures": {
+				"0": {
+					"name": "constant.character.amuse"
+				}
+			},
+			"end": "</sf>",
+			"endCaptures": {
+				"0": {
+					"name": "constant.character.amuse"
+				}
+			},
+			"name": "constant.language.amuse"	
+		},
+		"sc_tag": {
+			"begin": "<sc>",
+			"beginCaptures": {
+				"0": {
+					"name": "constant.character.amuse"
+				}
+			},
+			"end": "</sc>",
+			"endCaptures": {
+				"0": {
+					"name": "constant.character.amuse"
+				}
+			},
+			"name": "constant.language.amuse"	
+		}		
+	},
+	"scopeName": "source.muse"
+}
