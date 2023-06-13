@@ -174,7 +174,7 @@
 			"name": "string.unquoted.amuse"	
 		},
 		"directives": {
-			"begin": "^#(author |title |lang |LISTtitle |subtitle |SORTauthors |SORTtopics |date |notes |source |publisher |isbn |rights |seriesname |seriesnumber |hyphenation |slides |DELETED |cover |coverwidth |nocoverpage |notoc |nofinalpage |impressum |continuefootnotes |centerchapter |centersection |formats |pubdate )",
+			"begin": "^#(author |title |lang |LISTtitle |subtitle |SORTauthors |SORTtopics |date |topics |notes |source |publisher |isbn |rights |seriesname |seriesnumber |hyphenation |slides |DELETED |cover |coverwidth |nocoverpage |notoc |nofinalpage |impressum |continuefootnotes |centerchapter |centersection |formats |pubdate )",
 			"beginCaptures": {
 				"0": {
 					"name": "keyword.operator.new"
