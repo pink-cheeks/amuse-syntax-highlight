@@ -42,6 +42,9 @@
 			"include": "#sc_tag"
 		},
 		{
+			"include": "#quote"
+		},
+		{
 			"include": "#center"
 		},
 		{
@@ -82,6 +85,21 @@
 		"breakline": {
 			"match": "<br>",
 			"name": "keyword.control.amuse"	
+		},
+		"quote": {
+			"begin": "^<quote>$",
+			"beginCaptures": {
+				"0": {
+					"name": "keyword.control.amuse"
+				}
+			},
+			"end": "^</quote>$",
+			"endCaptures": {
+				"0": {
+					"name": "keyword.control.amuse"
+				}
+			},
+			"name": "string.unquoted.amuse"	
 		},
 		"center": {
 			"begin": "^<center>$",
